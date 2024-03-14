@@ -1,0 +1,30 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block allproducts %} 
+<div>
+    <img src="{% static "core/images/Background.webp" %}" width="1190px" height="350px">
+</div>
+<h3 class="all"><u>ALL PRODUCTS</u></h3>
+<div class="container">
+    <div class="row">
+        {% for a in al %}
+         <a href="#">
+         <div class="cl-sm-4 mr-2 mb-4 mr-4">
+            <div class="card height" style="width: 18rem;" >
+                <img src="{{a.image.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{a.name}}</h5>
+                  <p class="card-text">{{a.description}}</p>
+                  <h5 class="card-price">Rs. {{a.price}}/-</h5>
+                  <a href="#" class="btn btn-success">ADD TO CART</a>
+                </div>
+            </div>
+         </div>
+        {% endfor %}
+       
+    </div>
+</div> 
+
+
+
+{% endblock allproducts %}

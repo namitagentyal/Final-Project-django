@@ -1,0 +1,48 @@
+{% extends 'core/base.html'%}
+{% load static %}
+{% block contact %} 
+
+<div class="contact">
+    <h4 class="btn btn-default">Enable seemless support</h4>
+    <a href={% url "signup" %}><button class="btn btn-primary">SIGNUP</button></a>
+    <a href={% url "login" %}><button class="btn btn-primary">LOGIN</button></a>
+</div> 
+<br>
+<br><br><br><br>
+
+<h1 style="text-align:center;font-size:23px;font-weight:bold; border: 2px solid black;
+border-radius: 25px;border:"><b>CUSTOMERS FEEDBACK</b></h1>
+
+<div class="m-contact-banner-img">
+  <img src="//www.drsheths.com/cdn/shop/files/About-us---Contact_1000x.jpg?v=1695281671" class="lazypreload lazyloaded">
+  </div>
+<div class="text-right  container mt-5">
+  <h4>Have Queries or Concerns?</h4>
+ <a href={% url "contact" %}><button class="btn btn-primary">Contact Us</button></a>
+</div>
+<br><br>
+<div style="position:absolute;top:219%;left:50px;">
+  <h4>Payment</h4>
+  <img src={% static "core/images/phonepe.png" %} height="50px" width="70px">
+  <img src={% static "core/images/Rupay.jpg" %} height="30px" width="70px">
+  <img src={% static "core/images/visa.jpg" %} height="20px" width="70px">
+  <img src={% static "core/images/Mastercard.png" %} height="30px" width="60px">
+</div>
+
+<br><br>
+<footer class="py-3 my-4">
+   <ul class="nav justify-content-center border-bottom pb-3 mb-3"  >
+     <li class="nav-item"><a href="{% url "home" %}" class="nav-link px-2 text-dark .fs-1 text">HOME</a></li>
+     <li class="nav-item"><a href="{% url "about" %}" class="nav-link px-2 text-dark .fs-1 text">ABOUT US</a></li>
+     <li class="nav-item"><a href="{% url "contact" %}" class="nav-link px-2 text-dark .fs-1 text">CONTACT US</a></li>
+    </ul>
+    <div class="text-center">
+      <a href="https://www.facebook.com/profile.php?id=100091300453600"><i class="fa fa-facebook-f" style='font-size:24px'></i>
+    <a href="https://www.instagram.com/naammiittaa/"><i class="fa fa-instagram" style="font-size:24px;"></i>
+    <a href="https://www.linkedin.com/in/namita-gentyal-857876287/"><i class='fab fa-linkedin-in' style='font-size:24px'></i>
+    </div>
+</footer>
+ 
+
+
+{% endblock contact %}

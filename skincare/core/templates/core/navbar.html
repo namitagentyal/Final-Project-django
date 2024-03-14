@@ -1,0 +1,48 @@
+{% load static %}
+
+     <nav class="navbar navbar-expand-md navbar-default fixed-top bg-default">
+        <div class="container-fluid">
+          <img src="//www.drsheths.com/cdn/shop/files/width-1000px_300x.png?v=1690449385" class="logo" alt="Dr Sheth's" width='150px' height='50px'>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0 list">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/" role="button" data-toggle="dropdown" aria-expanded="false">
+                      SHOP
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Shop by concern</a>
+                      <a class="dropdown-item" href="#">Shop by routine</a>
+                    </div>
+                  </li> 
+              <li class="nav-item">
+                <a class="nav-link" href={% url "home" %}>HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href={% url "allproducts" %}>ALL PRODUCTS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href= {% url "about" %}>ABOUT US</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href= {% url "contact" %} >CONTACT US</a>
+              </li>
+              
+            </ul>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2 search"  type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <a href={% url "signup" %}><i class='fas fa-user-alt user' ></i></a>
+            <a href="#"><i class='fas fa-shopping-bag bag'></i></a> 
+            <a href={% url "logout" %}><i class='fas fa-sign-out-alt logout'></i></a> 
+
+      
+          </div>
+        </div>
+      </nav>
+      <br><br><br>
+  

@@ -1,0 +1,22 @@
+{% load static %}
+ <h1 class="new"><u>NEW LAUNCHES</u></h1> 
+ <h1 style="margin:105%"></h1> 
+<div class="container">
+    <div class="row">
+        {% for n in nl %}
+         <a href="#">
+         <div class="cl-sm-4 mr-2 mb-4 mr-4 ">
+            <div class="card height" style="width: 18rem;" >
+                <img src="{{n.image.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{n.name}}</h5>
+                  <p class="card-text">{{n.description}}</p>
+                  <h5 class="card-price">Rs. {{n.price}}/-</h5>
+                  <a href="#" class="btn btn-success">ADD TO CART</a>
+                </div>
+              </div>
+          </div>
+        {% endfor %}
+       
+    </div>
+</div> 

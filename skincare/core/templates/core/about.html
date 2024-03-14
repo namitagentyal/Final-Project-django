@@ -1,0 +1,33 @@
+{% extends 'core/base.html'%}
+{% load static %}
+
+{% block about %}
+
+<h1 style="text-align:center;font-size:23px;font-weight:bold; border: 2px solid black;
+border-radius: 25px;border:"><b>OUR STORY</b></h1> <br>
+<h6 style="text-align:center;font-size:15px;  color: black;font-weight:lighter;">Dr. Sheth’s is a dermatologist formulated luxury skincare range designed exclusively for Indian skin by three generations of skin doctors.</h6><br>
+<h1 style="text-align:left;margin-left:30px;font-size:25px;font-"><b><u>Made for Indian Skin</u></b></h1><br>
+<div>
+<img src="{% static "core/images/about_image.webp" %}" class="d-block w-100" alt="...">
+</div>
+<br><br>
+<h1 style="text-align:left;margin-left:30px;font-size:25px;font-"><b><u>Our Product Philosophy</u></b></h1><br>
+<div>
+<img src="{% static "core/images/about_img2.webp" %}" class="d-block w-100" alt="...">
+</div>
+<br>
+<footer class="py-3 my-4 ">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3"  >
+      <li class="nav-item"><a href="{% url "home" %}" class="nav-link px-2 text-dark .fs-1 text">HOME</a></li>
+      <li class="nav-item"><a href="{% url "about" %}" class="nav-link px-2 text-dark .fs-1 text">ABOUT US</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-dark .fs-1 text">CONTACT US</a></li>
+    </ul>
+    <div class="text-center">
+    <a href="https://www.facebook.com/profile.php?id=100091300453600"><i class="fa fa-facebook-f" style='font-size:24px'></i>
+    <a href="https://www.instagram.com/naammiittaa/"><i class="fa fa-instagram" style="font-size:24px;"></i>
+    <a href="https://www.linkedin.com/in/namita-gentyal-857876287/"><i class='fab fa-linkedin-in' style='font-size:24px'></i>
+    </div> 
+  </footer>
+
+
+{% endblock about %}

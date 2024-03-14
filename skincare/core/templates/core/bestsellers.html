@@ -1,0 +1,26 @@
+{% load static %}
+<div>
+  <img src="{% static "core/images/Background.webp" %}" width="1190px" height="350px">
+</div>
+ <h1 class="bestsellers"><u>BESTELLERS</u></h1> 
+<div class="container">
+    <div class="row">
+        {% for m in mf %}
+         <a href="#">
+         <div class="cl-sm-4 mr-2 mb-4 mr-4 height">
+            <div class="card height" style="width: 18rem;" >
+                <img src="{{m.image.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{m.name}}</h5>
+                  <p class="card-text">{{m.description}}</p>
+                  <h5 class="card-price">Rs. {{m.price}}/-</h5>
+                  <a href="#" class="btn btn-success">ADD TO CART</a>
+                </div>
+              </div>
+          </div>
+        {% endfor %}
+       
+    </div>
+</div> 
+
+        

@@ -1,0 +1,22 @@
+{% load static %}
+<h1 class="combos"><u>BESTELLERS COMBOS</u></h1>
+ <h1 style="margin:650px"></u></h1> 
+<div class="container">
+    <div class="row">
+        {% for b in bs %}
+         <a href="#">
+         <div class="cl-sm-4 mr-2 mb-4 mr-4 ">
+            <div class="card height" style="width: 18rem;" >
+                <img src="{{b.image.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{b.name}}</h5>
+                  <p class="card-text">{{b.description}}</p>
+                  <h5 class="card-price">Rs. {{b.price}}/-</h5>
+                  <a href="#" class="btn btn-success">ADD TO CART</a>
+                </div>
+              </div>
+          </div>
+        {% endfor %}
+       
+    </div>
+</div> 

@@ -1,0 +1,29 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block contact %}
+<h1 class="form-1">Create Account</h1>
+ <div class="containers"> 
+    
+    <form action="" method="POST" novalidate  class="">
+      {% csrf_token %}
+      {% for fm in form %}
+      {{fm.label_tag}} {{fm}} {{fm.errors|striptags}}<br><br>
+      {% endfor %}
+      <input type="submit" class=" text-center btn btn-success" value="Submit">
+    </form>
+  </div><br><br>
+  
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3"  >
+      <li class="nav-item"><a href="{% url "home" %}" class="nav-link px-2 text-dark .fs-1 text">HOME</a></li>
+      <li class="nav-item"><a href="{% url "about" %}" class="nav-link px-2 text-dark .fs-1 text">ABOUT US</a></li>
+      <li class="nav-item"><a href="{% url "contact" %}" class="nav-link px-2 text-dark .fs-1 text">CONTACT US</a></li>
+    </ul>
+    <div class="text-center">
+      <a href="https://www.facebook.com/profile.php?id=100091300453600"><i class="fa fa-facebook-f" style='font-size:24px'></i>
+    <a href="https://www.instagram.com/naammiittaa/"><i class="fa fa-instagram" style="font-size:24px;"></i>
+    <a href="https://www.linkedin.com/in/namita-gentyal-857876287/"><i class='fab fa-linkedin-in' style='font-size:24px'></i>
+    </div>
+  </footer>
+  
+{% endblock contact %}
